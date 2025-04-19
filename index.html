@@ -9,13 +9,20 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #e6e9ed;
+      background-color: hsl(215, 55%, 21%);
+      color: white;
     }
     header {
       background-color: #222;
       color: white;
       padding: 60px 20px;
       text-align: center;
+    }
+
+    h2, h3, p, .blockquote, .blockquote-footer {
+      background: linear-gradient(90deg, #ffffff, #cccccc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     header h1 {
       font-size: 48px;
@@ -28,7 +35,13 @@
       border: 5px;
       border-radius: 10px;
       object-fit: cover;
-     
+    }
+    .precos {
+      background: linear-gradient(135deg, #ffcc70, #ffaa00);
+      padding: 20px;
+      border-radius: 10px;
+      color: #111;
+      animation: pulse 2s infinite alternate;
     }
     .precos p {
       font-size: 18px;
@@ -50,6 +63,27 @@
     }
     .footer-links i {
       margin-right: 8px;
+    }
+
+    .cliente-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid white;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .fade-up {
+      animation: fadeUp 1.5s ease forwards;
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.02); }
     }
   </style>
 </head>
